@@ -228,15 +228,15 @@ button:hover{
 }
 
 #unsa {
-    background: #7A1F3D url("/imgs/facebook.jpg") center / 30px no-repeat;
+    background: #7A1F3D url("../imgs/facebook.jpg") center / 30px no-repeat;
 }
 
 #facebook {
-    background: #1877F2 url("/imgs/facebook-png.ng.png") center / 30px no-repeat;
+    background: #1877F2 url("../imgs/facebook-png.ng.png") center / 30px no-repeat;
 }
 
 #instagram {
-    background: #E1306C url("/imgs/instagram.webp") center / 30px no-repeat;
+    background: #E1306C url("../imgs/instagram.webp") center / 30px no-repeat;
 }
 
 .flotantes{
