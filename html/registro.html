@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style-registro.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="btn-volver">&larr; Volver al inicio</a>
+    </header>
+    <div>
+        <h2>
+        </h2>
+        <div class="container">
+            <form action="post" id="form-registro" >
+                <h2>Formulario de Registro</h2>
+                <div class="campo">
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" placeholder="44.333.222" required>
+                </div>
+                <div class="campo">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="Lisandro Rodriguez" required>
+                </div>
+                <div   class="campo" >
+                    <label for="email">Correo Electronico</label>
+                    <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="campo">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" id="pass" placeholder="Mínimo 6 carácteres">
+                </div>
+                <div class="campo">
+                    <label for="pass-confirm">Repetir Contraseña</label>
+                    <input type="password" id="pass-confirm" placeholder="Repite tu contraseña" required>
+                </div>
+                <span id="txt-problema"></span>
+                <button type="submit">Enviar Formulario</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/validacion.js">
+
+    </script>
+</body>
+
+</html>
