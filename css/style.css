@@ -229,7 +229,7 @@ button:hover{
 
 #unsa {
     background-color: #7A1F3D;
-    background-image: url("../imgs/unsa.png");
+    background-image: url("../imgs/logoUNSa.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30px;
@@ -237,7 +237,7 @@ button:hover{
 
 #instagram {
     background-color: #E1306C;
-    background-image: url("../imgs/instagram.png");
+    background-image: url("../imgs/instagram.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30px;
@@ -245,74 +245,96 @@ button:hover{
 
 #facebook {
     background-color: #1877F2;
-    background-image: url("../imgs/facebook.png");
+    background-image: url("../imgs/facebook-png.ng.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30px;
 }
 
-.flotantes{
+.flotantes {
     position: fixed;
-    width: 60px;
-    max-width: 7%;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    width: 50px;
+    z-index: 2000;
 }
-.flotantes a{
-    display: block;
+.flotantes .redes {
+    width: 100%;
+    height: 50px;
+}
+
+.flotantes a {
+    display: flex;
     position: relative;
-    
-    height: 60px;
-    width: 60px;
+    width: 50px;
+    height: 50px;
+
+    align-items: center;
+    justify-content: center;
+
     text-decoration: none;
-    
     font-size: 17px;
-    transition: all 500ms ease;
-    color:#fff
+    color: white;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 26px;
+
+    transition: all 0.3s ease;
 }
 
-.flotantes a:hover{
-    background-color: #1c1c1c;
+.flotantes a:hover {
+    transform: translateX(-5px);
+    filter: brightness(0.9);
 }
 
-.flotantes a:first-of-type{
-    background: #3b5998;
-    border-radius: 5px 0 0 0;
+flotantes .redes:first-child a {
+    border-radius: 6px 0 0 0;
 }
-.flotantes a:last-of-type{
-    background: #3b5998;
-    border-radius: 0 0 0 5px;
+.flotantes .redes:last-child a {
+    border-radius: 0 0 0 6px;
 }
 
-.flotantes .redes-nombre{
+.flotantes .redes-nombre {
     position: absolute;
+
     right: 100%;
     top: 50%;
+
     transform: translateY(-50%);
 
-    background: #1c1c1c;
+    background-color: #1c1c1c;
+    color: white;
+
     padding: 6px 10px;
-    border-radius: 3px;
+    border-radius: 4px;
 
     opacity: 0;
     visibility: hidden;
+
     white-space: nowrap;
-    transition: 0.3s;
+
+    transition: all 0.3s ease;
 }
 .flotantes a:hover .redes-nombre{
     opacity: 1;
     visibility: visible;
 }
-.flotantes .redes-nombre:after{
+.flotantes .redes-nombre::after {
     position: absolute;
-    content: '';
+
+    content: "";
+
     border-left: 6px solid #1c1c1c;
     border-right: 7px solid transparent;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
+
     left: 100%;
-    top: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
 }
 
 /*Para Pc y Tablet*/
@@ -377,21 +399,23 @@ button:hover{
     }
 
     .flotantes {
-        width: 45px;
+        width: 42px;
+    }
+
+    .flotantes .redes {
+        width: 42px;
+        height: 42px;
     }
 
     .flotantes a {
-        width: 45px;
-        height: 45px;
+        width: 42px;
+        height: 42px;
+        background-size: 22px;
     }
 
-    #unsa,
-    #facebook,
-    #instagram {
-        background-size: 24px;
-    }
+    
 
-    .redes-nombre {
+    .flotantes .redes-nombre {
         display: none;
     }
 }
