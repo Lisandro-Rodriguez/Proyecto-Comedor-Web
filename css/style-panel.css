@@ -106,11 +106,14 @@ header nav a:hover {
     border-radius: 10px;
     overflow: hidden; /* Clave: recorta las esquinas para que el summary encaje perfecto */
     border: 1px solid #e2e8f0;
+    padding: 12px 15px;
+    gap: 15px;
 }
-.dia-reserva h4{
-    width: 1%;
+.dia-reserva h4 {
+    width: auto;
+    min-width: 80px;
+    margin: 0;
 }
-
 .dia-reserva button{
     background-color: transparent;
     border-radius: 25%;
@@ -178,4 +181,36 @@ header nav a:hover {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border-radius: 5px;
     text-align: center;
+}
+
+.detalle-reserva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.estado {
+    font-weight: bold;
+}
+
+.reservado {
+    color: #0284c7;
+}
+
+.consumido {
+    color: #15803d;
+}
+
+.disponible {
+    color: #ea580c;
+}
+
+.vencido {
+    color: #64748b;
+}
+
+.dia-reserva button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
 }
