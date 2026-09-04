@@ -1,3 +1,22 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['usuario_id'])){
+        header("Location: index.php");
+        exit;
+    }
+
+    require_once("../config/conexion.php");
+    require_once("../modelos/UsuarioModelo.php");
+    require_once("../modelos/LocalidadModelo.php");
+
+    $usuario = new UsuarioModelo($pdo);
+    $datosUsuario = $usuario->buscarPorId($_SESSION['usuario_id']);
+
+
+    $localidadModelo = new LocalidadModelo($pdo);
+    $datosLocalidad = $localidadModelo->buscarPorId($datosUsuario['id_localidad']);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -15,15 +34,15 @@
                 <div class="datos-usuario">
                     <div class="campo">
                         <p>DNI</p>
-                        <span id="f-dni">44.136.272</span>
+                        <span id="f-dni"><?=$datosUsuario['dni']?></span>
                     </div>
                     <div class="campo">
                         <p>Alumno</p>
-                        <span id="f-nombre">Rodriguez Lisandro</span>
+                        <span id="f-nombre"><?=$datosUsuario['apellido'] . " " . $datosUsuario['nombre']?></span>
                     </div>
                     <div class="campo">
                         <p>Localidad</p>
-                        <span id="f-localidad">Capital</span>
+                        <span id="f-localidad"><?= $datosLocalidad['nombre_localidad']?></span>
                     </div>
                     
                 </div>
@@ -31,7 +50,7 @@
             
             <nav>
                 <a href="#editar" class="btn-header">Editar Perfil</a>
-                <a href="index.html" class="btn-header btn-cerrar">Cerrar Sesión</a>
+                <a href="../controladores/logout.php" class="btn-header btn-cerrar">Cerrar Sesión</a>
             </nav>
         </header>
 

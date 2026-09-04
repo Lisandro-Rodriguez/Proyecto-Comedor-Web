@@ -13,14 +13,13 @@ form.addEventListener("submit", function(event){
                 mensaje.textContent="Error, contraseñas distintas";
                 mensaje.style.color="red";
             }else{
-                alert("Exito");
-                window.location.href="../html/index.html";
+                form.submit();
             }
         }else{
             mensaje.textContent="Error, contraseñas menores a 6 carácteres";
             mensaje.style.color="red";
         }
-    }else{
+    }else{  
         mensaje.textContent="Error, campos incompletos";
         mensaje.style.color="red";
     }

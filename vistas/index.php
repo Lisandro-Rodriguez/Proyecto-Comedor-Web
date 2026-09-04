@@ -10,14 +10,14 @@
         <header>
             <img src="../imgs/logoUNSa.jpeg" alt="Logo UNSa">
             <nav>
-                <a href="../html/registro.html">Registro</a>
+                <a href="../vistas/registro.php">Registro</a>
             </nav>
         </header>
 
         <main class="content">
             <section class="inicio-sesion">
                 <h2 class="titulo">Iniciar Sesión</h2>
-                <form action="login.php" method="POST">
+                <form action="../controladores/LoginControlador.php" method="POST">
 
                     <div class="caja-usuario">
                         <label for="usuario">Usuario <strong>(DNI)</strong>:</label>
@@ -35,8 +35,8 @@
                     </div>
 
                     <div class="caja-enlaces">
-                        <a href="#">¿Olvidaste tu contraseña?</a>
-                        <a href="#">Registrarse</a>
+                        <a href="../vistas/registro.html">¿Olvidaste tu contraseña?</a>
+                        <a href="../vistas/registro.html">Registrarse</a>
                     </div>
                     
                     <span id="msj-error"></span>
