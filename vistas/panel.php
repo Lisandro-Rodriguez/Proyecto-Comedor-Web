@@ -51,6 +51,9 @@
             <nav>
                 <a href="#editar" class="btn-header">Editar Perfil</a>
                 <a href="../controladores/logout.php" class="btn-header btn-cerrar">Cerrar Sesión</a>
+                <?php if (isset($_SESSION['id_rol']) && $_SESSION['id_rol'] === 1): ?>
+                <a href="panel_admin.php" class="btn-header">Administrativo</a>
+                <?php endif; ?>
             </nav>
         </header>
 

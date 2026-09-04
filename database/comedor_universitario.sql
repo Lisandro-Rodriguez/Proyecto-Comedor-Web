@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `localidades`
 --
-
+USE `comedor_universitario`;
 CREATE TABLE `localidades` (
   `id_localidad` int(11) NOT NULL,
   `nombre_localidad` varchar(60) NOT NULL
